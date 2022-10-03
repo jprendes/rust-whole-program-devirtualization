@@ -17,6 +17,7 @@ Whole program devirtualization is an optimization step where virtual interfaces 
 `clang` (and hence LLVM) supports whole-program-devirtualization if the generated LLVM-IR is properly annotated:
 * See `-fwhole-program-vtables` in [`clang`'s doc](https://clang.llvm.org/docs/ClangCommandLineReference.html)
 * There's an [open issue](https://github.com/rust-lang/rust/issues/68262) in Rust's GitHub for what seems to be the same problem, but with a different reproduction steps.
+* It seems that the generated LLVM-IR need to have [Type Metadata](https://llvm.org/docs/TypeMetadata.html) annotations. This would be have to be added during Rust's [definition visibility computation](https://doc.rust-lang.org/nightly/nightly-rustc/rustc_middle/ty/context/struct.TyCtxt.html#method.visibility).
 
 ## Running
 
