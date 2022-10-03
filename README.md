@@ -23,5 +23,5 @@ Whole program devirtualization is an optimization step where virtual interfaces 
 
 Run the `test.sh` script
 ```bash
-./test.sh && echo "program not optimized" || echoi "program optimized"
+./test.sh && echo "program not optimized" || echo "program optimized"
 ```
