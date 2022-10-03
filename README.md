@@ -14,8 +14,8 @@ Whole program devirtualization is an optimization step where virtual interfaces 
 * The compiler would identify the unused function and elimate it.
 * The runtime performance would improve by avoiding the unnecesary vtable lookup.
 
-Clang (and hence LLVM) supports whole-program-devirtualization is the generated LLVM-IR is properly annotated:
-* See `-fwhole-program-vtables` in [](https://clang.llvm.org/docs/ClangCommandLineReference.html)
+`clang` (and hence LLVM) supports whole-program-devirtualization if the generated LLVM-IR is properly annotated:
+* See `-fwhole-program-vtables` in [`clang`'s doc](https://clang.llvm.org/docs/ClangCommandLineReference.html)
 * There's an [open issue](https://github.com/rust-lang/rust/issues/68262) in Rust's GitHub for what seems to be the same problem, but with a different reproduction steps.
 
 ## Running
